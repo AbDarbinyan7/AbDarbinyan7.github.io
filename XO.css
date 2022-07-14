@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, red, blue);
+    overflow-y: hidden;
+    height: 100vh;
+}
+.modal{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.modalInput{
+    border: none;
+    background: none;
+    font-size: 80px;
+    width: 105px;
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    outline: none;
+}
+.modalInput::-webkit-inner-spin-button, 
+.modalInput::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+
+#mySelect{
+    display: none;
+    width: 150px;
+    border: none;
+    font-size: 80px;
+    font-weight: bold;
+    background: transparent;
+    color: white;
+    border-radius: 5%;
+    box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
+}
+.boardPlaces{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+.modalQuestion{
+    display: none;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    transition: 0.5s;
+}
+.placeButton{
+    display: none;
+    margin-top: 30px;
+    padding: 23px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    font-size: 80px;
+    color: yellow;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: transparent;
+    transition: 0.5s ;
+}
+
+.placeButton:hover{
+    box-shadow: 0px 0px 25px 0px rgb(110, 255, 158);
+    transform: rotate(360deg);
+}
+.placeButton:active{
+    transition: 0s;
+    background: rgba(182, 182, 182,0.8);
+}
+.valuePlace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    width: 90px;
+    background: transparent;
+    color: white;
+    transition: 0.8s ;
+    box-shadow: 0px 0px 25px 0px rgb(0, 0, 0);
+}
+.valuePlace:hover{
+    background: red;
+    cursor: pointer;
+}
+.board{
+    margin: 50px auto 30px;
+    display: grid;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 15px 0px black;
+}
+.place{
+    background: #000;
+    transition: 0.5s ;
+    /* min-height: 50px ; */
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid  rgb(95, 202, 122);
+}
+.place:hover{
+    background: rgb(0, 132, 255);
+}
+.place:active{
+    background: #000;
+}
+.question{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    transition: 0.5s;
+}
+.xOry{
+    width: 170px;
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 10px auto 20px;
+    box-shadow: 0px 0px 20px 0px rgb(0, 255, 170);
+}
+.xOry button{
+    padding: 5px 0;
+    width: 100%;
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: monospace;
+    background: rgb(0, 255, 170);
+}
+.xOry button:hover{
+    background: linear-gradient( to top,rgb(199, 212, 218),rgb(255, 251, 0));
+
+}
+.xOry button:active{
+    background: rgb(0, 255, 170);
+}
+.questionAnim{
+        animation: color-change 1s infinite;
+}
+@keyframes color-change {
+    0% { color: red; }
+    50% { color: yellow }
+    100% { color: red; }
+  }
+
+.x:hover {
+    background: black;
+}
+.resetButton {
+    width: 146px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    border: none;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    background: rgb(0 255 149);
+    color: rgb(0 0 0);
+    box-shadow: 0px 0px 20px 0px rgb(255 255 255);
+    padding: 5px 0;
+}
+.resetButton:hover{
+    transform: scale(1.2);
+}
+.placeQuestion{
+    width: max-content;
+    margin: 0 auto;
+    padding: 10px;
+}
+span{
+    color: yellow;
+    font-size:40px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.placeQuestionP:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* .placeQuestion :hover{
+    transform: scale(1.1);
+    cursor: pointer;
+} */
+.placeQuestion :active{
+    transform: none;
+}
