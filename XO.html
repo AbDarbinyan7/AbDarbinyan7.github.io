@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/XO.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="modal">
+      <p class="modalQuestion">
+        Please Enter the Board <span>Side</span> length <br />
+        From <span>3</span> To <span>10</span>
+      </p>
+      <input
+        type="number"
+        onkeypress="return isNumberKey(event)"
+        autofocus
+        class="modalInput"
+      />
+      <button class="placeButton">GO</button>
+    </div>
+    <div class="board"></div>
+    <p class="question">Please select the Player!!!</p>
+    <div class="xOry">
+      <button class="buttonX">X</button>
+      <button class="buttonY">O</button>
+    </div>
+    <div class="placeQuestion">
+      <p class="question placeQuestionP">
+        You can change <span>Game</span> board <span>:)</span>
+      </p>
+    </div>
+    <script src="./js/XO.js"></script>
+  </body>
+</html>
